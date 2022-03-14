@@ -1,5 +1,8 @@
 on: [push]
 
+env:
+  ACR_MODULE_N: plan
+
 name: DEV - Deploy Azure Resource
 jobs:
   deploy_to_dev:
@@ -26,4 +29,4 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
         az bicep build --file main.bicep
-        az bicep publish --file main.bicep --target br:${{ secrets.REGISTRY_LOGIN_SERVER }}/bicep/modules/app:${{ github.sha }}
+        az bicep publish --file main.bicep --target br:${{ secrets.REGISTRY_LOGIN_SERVER }}/bicep/modules/$ACR_MODULE_N:${{ github.sha }}

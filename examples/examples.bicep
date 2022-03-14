@@ -2,79 +2,74 @@ targetScope = 'resourceGroup'
 // ------------------------------------------------------------------------------------------------
 // Deployment parameters
 // ------------------------------------------------------------------------------------------------
-param location string = 'eastus2'
 // Sample tags parameters
 var tags = {
-  project: 'test'
-  env: 'qa'
-}
-
-// Sample App Service Plan parameters
-param plan_n string = 'plan-azure-bicep-app-service-test'
-param plan_sku_code string = 'P1V3'
-param plan_sku_tier string = 'PremiumV3'
-param plan_enable_zone_redundancy bool = false
-
-// Create a Sample App Service Plan
-resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
-  tags: tags
-  name: plan_n
-  location: location
-  sku: {
-    name: plan_sku_code
-    tier: plan_sku_tier
-    capacity: plan_enable_zone_redundancy ? 3 : 1
-  }
-  properties: {
-    zoneRedundant: plan_enable_zone_redundancy
-  }
+  project: 'bicephub'
+  env: 'dev'
 }
 
 // ------------------------------------------------------------------------------------------------
 // REPLACE
 // '../main.bicep' by the ref with your version, for example:
-// 'br:bicephubdev.azurecr.io/bicep/modules/app:v1'
+// 'br:bicephubdev.azurecr.io/bicep/modules/plan:v1'
 // ------------------------------------------------------------------------------------------------
 
-module DeployOneApp '../main.bicep' = {
-  name: 'deployOneApp'
+module DeployOnePlanPremiumv3 '../main.bicep' = {
+  name: 'DeployOnePlanPremiumv3'
   params: {
-    location: location
-    app_enable_https_only: false
-    app_names: 'appA-${guid(subscription().id, resourceGroup().id, tags.env)}'
-    plan_id: appServicePlan.id
-    app_min_tls_v: '1.2'
-  }
-}
-module DeployOneAppHttps '../main.bicep' = {
-  name: 'deployOneAppHttps'
-  params: {
-    location: location
-    app_enable_https_only: true
-    app_names: 'appHttpsA-${guid(subscription().id, resourceGroup().id, tags.env)}'
-    plan_id: appServicePlan.id
-    app_min_tls_v: '1.1'
+    plan_enable_zone_redundancy: false
+    plan_sku_code: 'P1V3'
+    plan_sku_tier: 'PremiumV3'
+    plan_n: 'plan-DeployOnePlanPremiumv3'
+    location: 'eastus2'
+    tags: tags
   }
 }
 
-module DeployMultipleApps '../main.bicep' = {
-  name: 'deployMultipleApp'
+module DeployOnePlanPremiumv2HA '../main.bicep' = {
+  name: 'DeployOnePlanPremiumv2HA'
   params: {
-    location: location
-    app_enable_https_only: false
-    app_names: 'appMultiA-${guid(subscription().id, resourceGroup().id, tags.env)},appMultiB${guid(subscription().id, resourceGroup().id, tags.env)}'
-    plan_id: appServicePlan.id
-    app_min_tls_v: '1.0'
+    plan_enable_zone_redundancy: true
+    plan_sku_code: 'P1V2'
+    plan_sku_tier: 'PremiumV2'
+    plan_n: 'plan-DeployOnePlanPremiumv2HA'
+    location: 'eastus'
+    tags: tags
   }
 }
 
-module DeployMultipleAppsHttps '../main.bicep' = {
-  name: 'deployMultipleAppHttps'
+module DeployOnePlanStandard '../main.bicep' = {
+  name: 'DeployOnePlanHA'
   params: {
-    location: location
-    app_enable_https_only: true
-    app_names: 'appMultiHttpsA-${guid(subscription().id, resourceGroup().id, tags.env)},appMultiHttpB${guid(subscription().id, resourceGroup().id, tags.env)}'
-    plan_id: appServicePlan.id
-    app_min_tls_v: '1.2'
+    plan_enable_zone_redundancy: true
+    plan_sku_code: 'S2'
+    plan_sku_tier: 'Standard'
+    plan_n: 'plan-DeployOnePlanStandard'
+    location: 'centralus'
+    tags: tags
+  }
+}
+
+module DeployOnePlanBasic '../main.bicep' = {
+  name: 'DeployOnePlanBasic'
+  params: {
+    plan_enable_zone_redundancy: true
+    plan_sku_code: 'B1'
+    plan_sku_tier: 'Basic'
+    plan_n: 'plan-DeployOnePlanStandard'
+    location: 'westus'
+    tags: tags
+  }
+}
+
+module DeployOnePlanFree '../main.bicep' = {
+  name: 'DeployOnePlanFree'
+  params: {
+    plan_enable_zone_redundancy: true
+    plan_sku_code: 'F1'
+    plan_sku_tier: 'Free'
+    plan_n: 'plan-DeployOnePlanFree'
+    location: '	southcentralus'
+    tags: tags
   }
 }
