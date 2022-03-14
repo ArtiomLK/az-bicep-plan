@@ -21,7 +21,7 @@ jobs:
       # Test Azure Resource Deployment
     - uses: ./.github/actions/deploy-az-resource
       with:
-        az_rg_n: $RG_N
+        az_rg_n: ${{ env.RG_N }}
 
       # Deploy Resource to ACR
     - uses: azure/docker-login@v1
