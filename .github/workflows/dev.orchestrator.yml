@@ -25,8 +25,8 @@ jobs:
       # Deploy Resource to ACR
     - uses: azure/docker-login@v1
       with:
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
     - run: |
         az bicep build --file main.bicep
-        az bicep publish --file main.bicep --target br:${{ secrets.REGISTRY_LOGIN_SERVER }}/bicep/modules/$ACR_MODULE_N:${{ github.sha }}
+        az bicep publish --file main.bicep --target br:${{ secrets.ACR_LOGIN_SERVER }}/bicep/modules/$ACR_MODULE_N:${{ github.sha }}
