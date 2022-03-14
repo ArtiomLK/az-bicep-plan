@@ -41,7 +41,7 @@ module DeployOnePlanPremiumv2HA '../main.bicep' = {
 module DeployOnePlanStandard '../main.bicep' = {
   name: 'DeployOnePlanStandard'
   params: {
-    plan_enable_zone_redundancy: true
+    plan_enable_zone_redundancy: false
     plan_sku_code: 'S2'
     plan_sku_tier: 'Standard'
     plan_n: 'plan-DeployOnePlanStandard'
@@ -53,7 +53,7 @@ module DeployOnePlanStandard '../main.bicep' = {
 module DeployOnePlanBasic '../main.bicep' = {
   name: 'DeployOnePlanBasic'
   params: {
-    plan_enable_zone_redundancy: true
+    plan_enable_zone_redundancy: false
     plan_sku_code: 'B1'
     plan_sku_tier: 'Basic'
     plan_n: 'plan-DeployOnePlanBasic'
@@ -65,7 +65,7 @@ module DeployOnePlanBasic '../main.bicep' = {
 module DeployOnePlanFree '../main.bicep' = {
   name: 'DeployOnePlanFree'
   params: {
-    plan_enable_zone_redundancy: true
+    plan_enable_zone_redundancy: false
     plan_sku_code: 'F1'
     plan_sku_tier: 'Free'
     plan_n: 'plan-DeployOnePlanFree'
