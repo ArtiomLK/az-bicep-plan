@@ -11,7 +11,7 @@ az group create \
 
 # Deploy Sample Modules
 az deployment group create \
---resource-group 'rg-azure-bicep-app-service' \
+--resource-group 'rg-azure-bicep-app-service-plan' \
 --mode Complete \
 --template-file main.bicep
 ```

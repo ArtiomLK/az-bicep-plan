@@ -2,6 +2,7 @@ on: [push]
 
 env:
   ACR_MODULE_N: plan
+  RG_N: rg-azure-bicep-app-service-plan
 
 name: DEV - Deploy Azure Resource
 jobs:
@@ -20,7 +21,7 @@ jobs:
       # Test Azure Resource Deployment
     - uses: ./.github/actions/deploy-az-resource
       with:
-        az_rg_n: ${{ secrets.RG_N }}
+        az_rg_n: $RG_N
 
       # Deploy Resource to ACR
     - uses: azure/docker-login@v1
