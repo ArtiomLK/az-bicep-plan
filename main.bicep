@@ -62,3 +62,4 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
 }
 
 output result object = appServicePlan
+output id string = appServicePlan.id
