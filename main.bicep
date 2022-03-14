@@ -60,3 +60,5 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
     zoneRedundant: plan_enable_zone_redundancy
   }
 }
+
+output result object = appServicePlan
