@@ -9,6 +9,7 @@ param location string
 // ------------------------------------------------------------------------------------------------
 // Application parameters
 // ------------------------------------------------------------------------------------------------
+@description('App Service Plan Size')
 @allowed([
   'F1'
   'B1'
@@ -25,6 +26,8 @@ param location string
   'P3V3'
 ])
 param plan_sku_code string
+
+@description('App Service Plan SKU Tier')
 @allowed([
   'Free'
   'Basic'
@@ -33,7 +36,11 @@ param plan_sku_code string
   'PremiumV3'
 ])
 param plan_sku_tier string
+
+@description('App Service Plan Name')
 param plan_n string
+
+@description('Enable App Service Plan High Availability')
 param plan_enable_zone_redundancy bool // CAN'T BE UPDATED AFTER RESOURCE DEPLOYMENT
 
 
