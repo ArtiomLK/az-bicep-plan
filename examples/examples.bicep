@@ -73,3 +73,16 @@ module DeployOnePlanFree '../main.bicep' = {
     tags: tags
   }
 }
+
+module DeployOneLinuxPlanPremiumv3 '../main.bicep' = {
+  name: 'DeployOneLinuxPlanPremiumv3'
+  params: {
+    plan_enable_zone_redundancy: false
+    plan_sku_code: 'P3V3'
+    plan_sku_tier: 'PremiumV3'
+    plan_n: 'plan-DeployOneLinuxPlanPremiumv3'
+    plan_os_kind: 'linux'
+    location: 'southcentralus'
+    tags: tags
+  }
+}

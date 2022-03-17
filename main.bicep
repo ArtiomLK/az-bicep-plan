@@ -40,6 +40,13 @@ param plan_sku_tier string
 @description('App Service Plan Name')
 param plan_n string
 
+@description('App Service Plan OS kind')
+@allowed([
+  ''
+  'linux'
+])
+param plan_os_kind string = ''
+
 @description('Enable App Service Plan High Availability')
 param plan_enable_zone_redundancy bool // CAN'T BE UPDATED AFTER RESOURCE DEPLOYMENT
 
@@ -51,6 +58,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   tags: tags
   name: plan_n
   location: location
+  kind: plan_os_kind
   sku: {
     name: plan_sku_code
     tier: plan_sku_tier
