@@ -74,15 +74,15 @@ module DeployOnePlanFree '../main.bicep' = {
   }
 }
 
-module DeployOneLinuxPlanPremiumv3 '../main.bicep' = {
-  name: 'DeployOneLinuxPlanPremiumv3'
+module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
+  name: 'DeployOneLinuxPlanPremiumv2'
   params: {
     plan_enable_zone_redundancy: false
-    plan_sku_code: 'P3V3'
-    plan_sku_tier: 'PremiumV3'
-    plan_n: 'plan-DeployOneLinuxPlanPremiumv3'
+    plan_sku_code: 'P2V2'
+    plan_sku_tier: 'PremiumV2'
+    plan_n: 'plan-DeployOneLinuxPlanPremiumv2'
     plan_os_kind: 'linux'
-    location: 'southcentralus'
+    location: 'westus2'
     tags: tags
   }
 }
