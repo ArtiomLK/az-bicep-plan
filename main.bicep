@@ -58,7 +58,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   tags: tags
   name: plan_n
   location: location
-  kind: plan_os_kind
+  kind: 'linux'
   sku: {
     name: plan_sku_code
     tier: plan_sku_tier
