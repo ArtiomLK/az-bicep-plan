@@ -58,7 +58,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   tags: tags
   name: plan_n
   location: location
-  kind: 'linux'
+  kind: plan_os_kind
   sku: {
     name: plan_sku_code
     tier: plan_sku_tier
@@ -66,6 +66,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   }
   properties: {
     zoneRedundant: plan_enable_zone_redundancy
+    reserved: plan_os_kind == 'linux'
   }
 }
 
