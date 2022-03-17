@@ -82,7 +82,7 @@ module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
     plan_sku_tier: 'PremiumV2'
     plan_n: 'plan-DeployOneLinuxPlanPremiumv2'
     plan_os_kind: 'linux'
-    location: 'westus2'
+    location: 'eastus'
     tags: tags
   }
 }
