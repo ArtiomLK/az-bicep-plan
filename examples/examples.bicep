@@ -122,7 +122,7 @@ module DeployOneLinuxPlanFree '../main.bicep' = {
     plan_sku_tier: 'Free'
     plan_os_kind: 'linux'
     plan_n: 'plan-DeployOneLinuxPlanFree'
-    location: 'southcentralus'
+    location: 'westus3'
     tags: tags
   }
 }

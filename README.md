@@ -10,7 +10,7 @@
 | location                    | Az Resources deployment location. To get Az regions run `az account list-locations -o table` | string [default: rg location] | `eastus` \| `centralus` \| `westus` \| `westus2` \| `southcentralus` |
 | plan_n                      | App Service Plan Name                                                                        | string [required]             |                                                                      |
 | plan_sku_code               | App Service Plan Size                                                                        | string [default: `F1`]        | `F1` \| `S2` \| `P1V2` \| `P3V2` \| `P3V3`                           |
-| plan_sku_tier               | App Service Plan SKU Tier                                                                    | string [defaults: `Free`]     | `Free` \| `Basic` \| `Standard` \| `PremiumV2` \| `PremiumV3`        |
+| plan_sku_tier               | App Service Plan SKU Tier                                                                    | string [default: `Free`]      | `Free` \| `Basic` \| `Standard` \| `PremiumV2` \| `PremiumV3`        |
 | plan_os_kind                | App Service Plan OS kind                                                                     | string [default: `windows`]   | `windows` \| `'linux'`                                               |
 | plan_enable_zone_redundancy | Enable App Service Plan High Availability Zone Redundancy                                    | string                        |                                                                      |
 
