@@ -14,6 +14,13 @@ var tags = {
 // 'br:bicephubdev.azurecr.io/bicep/modules/plan:v1'
 // ------------------------------------------------------------------------------------------------
 
+module DefaultPlan '../main.bicep' = {
+  name: 'DefaultPlan'
+  params: {
+    plan_n: 'plan-DefaultPlan'
+    location: 'eastus2'
+  }
+}
 module DeployOnePlanPremiumv3 '../main.bicep' = {
   name: 'DeployOnePlanPremiumv3'
   params: {
