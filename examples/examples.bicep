@@ -14,6 +14,9 @@ var tags = {
 // 'br:bicephubdev.azurecr.io/bicep/modules/plan:v1'
 // ------------------------------------------------------------------------------------------------
 
+// ------------------------------------------------------------------------------------------------
+// Windows App Service Plan examples
+// ------------------------------------------------------------------------------------------------
 module DefaultPlan '../main.bicep' = {
   name: 'DefaultPlan'
   params: {
@@ -118,7 +121,7 @@ module DeployOneLinuxPlanFree '../main.bicep' = {
     plan_sku_code: 'F1'
     plan_sku_tier: 'Free'
     plan_os_kind: 'linux'
-    plan_n: 'plan-DeployOnePlanFree'
+    plan_n: 'plan-DeployOneLinuxPlanFree'
     location: 'southcentralus'
     tags: tags
   }
