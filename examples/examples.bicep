@@ -24,6 +24,7 @@ module DefaultPlan '../main.bicep' = {
     location: 'eastus2'
   }
 }
+
 module DeployOnePlanPremiumv3 '../main.bicep' = {
   name: 'DeployOnePlanPremiumv3'
   params: {
