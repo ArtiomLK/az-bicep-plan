@@ -2,30 +2,19 @@
 
 [![DEV - Deploy Azure Resource](https://github.com/ArtiomLK/azure-bicep-app-service-plan/actions/workflows/dev.orchestrator.yml/badge.svg?branch=main&event=push)](https://github.com/ArtiomLK/azure-bicep-app-service-plan/actions/workflows/dev.orchestrator.yml)
 
-## Instructions
+[Reference examples][1]
 
-### Parameter Values
-
-| Name                        | Description                                                                                  | Value                         | Examples                                                             |
-| --------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------- |
-| tags                        | Az Resources tags                                                                            | object                        | `{ key: value }`                                                     |
-| location                    | Az Resources deployment location. To get Az regions run `az account list-locations -o table` | string [default: rg location] | `eastus` \| `centralus` \| `westus` \| `westus2` \| `southcentralus` |
-| plan_n                      | App Service Plan Name                                                                        | string [required]             |                                                                      |
-| plan_sku_code               | App Service Plan Size                                                                        | string [default: `F1`]        | `F1` \| `S2` \| `P1V2` \| `P3V2` \| `P3V3`                           |
-| plan_sku_tier               | App Service Plan SKU Tier                                                                    | string [default: `Free`]      | `Free` \| `Basic` \| `Standard` \| `PremiumV2` \| `PremiumV3`        |
-| plan_os_kind                | App Service Plan OS kind                                                                     | string [default: `windows`]   | `windows` \| `'linux'`                                               |
-| plan_enable_zone_redundancy | Enable App Service Plan High Availability Zone Redundancy                                    | string                        |                                                                      |
-
-### Conditional Parameter Values
-
-#### App Service Plan Combinations
-
-Only PremiumV2 and PremiumV3 allow Hight Availability Zone Redundancy
+## App Service Plan Combinations
 
 - App Service Plan **Free**:
   - `Free`
     - `F1`
 - App Service Plan **Basic**:
+  - `Basic`
+    - `B1`
+    - `B2`
+    - `B3`
+- App Service Plan **Standard**:
   - `Standard`
     - `S1`
     - `S2`
@@ -40,8 +29,6 @@ Only PremiumV2 and PremiumV3 allow Hight Availability Zone Redundancy
     - `P1V3`
     - `P2V3`
     - `P3V3`
-
-### [Reference Examples][1]
 
 ## Locally test Azure Bicep Modules
 
@@ -59,4 +46,11 @@ az deployment group create \
 --template-file examples/examples.bicep
 ```
 
+## Additional Resources
+
+- App Service Plan
+- App Service
+- [MS | Docs | App Service pricing - Comparison Table][2]
+
 [1]: ./examples/examples.bicep
+[2]: https://azure.microsoft.com/en-us/pricing/details/app-service/windows/
