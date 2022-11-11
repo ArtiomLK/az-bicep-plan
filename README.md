@@ -30,6 +30,16 @@
     - `P2V3`
     - `P3V3`
 
+## Subnet Requirements
+
+| CIDR block size | Maximum available addresses | Maximum horizontal scale (instances)* |
+| --------------- | --------------------------- | ------------------------------------- |
+| /28             | 11                          | 5                                     |
+| /27             | 27                          | 13                                    |
+| /26             | 59                          | 29                                    |
+
+[To avoid any issues with subnet capacity, use a /26 with 64 addresses][4]
+
 ## Locally test Azure Bicep Modules
 
 ```bash
@@ -49,8 +59,11 @@ az deployment group create \
 ## Additional Resources
 
 - App Service Plan
+- [MS | Docs |Integrate your app with an Azure virtual network][3]
 - App Service
 - [MS | Docs | App Service pricing - Comparison Table][2]
 
 [1]: ./examples/examples.bicep
 [2]: https://azure.microsoft.com/en-us/pricing/details/app-service/windows/
+[3]: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+[4]: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration#subnet-requirements
