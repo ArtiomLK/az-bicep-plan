@@ -38,7 +38,10 @@
 | /27             | 27                          | 13                                    |
 | /26             | 59                          | 29                                    |
 
-[To avoid any issues with subnet capacity, use a /26 with 64 addresses][4]
+[To avoid any issues with subnet capacity, use a /26 with 64 addresses][4]. For instance:
+
+- snet-plan-web-vnet-integration /26
+- snet-plan-svc-vnet-integration /26
 
 ## Locally test Azure Bicep Modules
 
