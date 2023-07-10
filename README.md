@@ -44,7 +44,7 @@
 - snet-plan-svc-external-vnet-integration 50.100.200.128/26
 - snet-plan-web-vnet-integration 50.100.200.192/26
 
-## [How Many Apps per Plan][5]
+## [How many Apps per Plan][5]
 
 ## Locally test Azure Bicep Modules
 
