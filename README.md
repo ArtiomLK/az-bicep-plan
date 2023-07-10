@@ -44,6 +44,8 @@
 - snet-plan-svc-external-vnet-integration 50.100.200.128/26
 - snet-plan-web-vnet-integration 50.100.200.192/26
 
+## [How Many Apps per Plan][5]
+
 ## Locally test Azure Bicep Modules
 
 ```bash
@@ -71,3 +73,4 @@ az deployment group create \
 [2]: https://azure.microsoft.com/en-us/pricing/details/app-service/windows/
 [3]: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
 [4]: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration#subnet-requirements
+[5]: https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans#should-i-put-an-app-in-a-new-plan-or-an-existing-plan
