@@ -25,17 +25,17 @@ module DefaultPlan '../main.bicep' = {
   }
 }
 
-// module DeployOnePlanPremiumv3 '../main.bicep' = {
-//   name: 'DeployOnePlanPremiumv3'
-//   params: {
-//     plan_enable_zone_redundancy: false
-//     plan_sku_code: 'P1V3'
-//     plan_sku_tier: 'PremiumV3'
-//     plan_n: 'plan-DeployOnePlanPremiumv3'
-//     location: 'eastus'
-//     tags: tags
-//   }
-// }
+module DeployOnePlanPremiumv3 '../main.bicep' = {
+  name: 'DeployOnePlanPremiumv3'
+  params: {
+    plan_enable_zone_redundancy: false
+    plan_sku_code: 'P1V3'
+    plan_sku_tier: 'PremiumV3'
+    plan_n: 'plan-DeployOnePlanPremiumv3'
+    location: 'westus3'
+    tags: tags
+  }
+}
 
 // module DeployOnePlanPremiumv2HA '../main.bicep' = {
 //   name: 'DeployOnePlanPremiumv2HA'
