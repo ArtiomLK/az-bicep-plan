@@ -21,7 +21,7 @@ module DefaultPlan '../main.bicep' = {
   name: 'DefaultPlan'
   params: {
     plan_n: 'plan-DefaultPlan'
-    location: 'eastus'
+    location: 'westus3'
   }
 }
 
@@ -68,7 +68,7 @@ module DeployOnePlanBasic '../main.bicep' = {
     plan_sku_code: 'B1'
     plan_sku_tier: 'Basic'
     plan_n: 'plan-DeployOnePlanBasic'
-    location: 'westus'
+    location: 'westus3'
     tags: tags
   }
 }
@@ -122,7 +122,7 @@ module DeployOneLinuxPlanFree '../main.bicep' = {
     plan_sku_tier: 'Free'
     plan_os_kind: 'linux'
     plan_n: 'plan-DeployOneLinuxPlanFree'
-    location: 'eastus'
+    location: 'westus3'
     tags: tags
   }
 }
