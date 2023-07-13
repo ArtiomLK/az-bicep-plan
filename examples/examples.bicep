@@ -21,7 +21,7 @@ module DefaultPlan '../main.bicep' = {
   name: 'DefaultPlan'
   params: {
     plan_n: 'plan-DefaultPlan'
-    location: 'eastus2'
+    location: 'westus3'
   }
 }
 
@@ -32,7 +32,7 @@ module DeployOnePlanPremiumv3 '../main.bicep' = {
     plan_sku_code: 'P1V3'
     plan_sku_tier: 'PremiumV3'
     plan_n: 'plan-DeployOnePlanPremiumv3'
-    location: 'eastus2'
+    location: 'westus3'
     tags: tags
   }
 }
@@ -44,7 +44,7 @@ module DeployOnePlanPremiumv2HA '../main.bicep' = {
     plan_sku_code: 'P1V2'
     plan_sku_tier: 'PremiumV2'
     plan_n: 'plan-DeployOnePlanPremiumv2HA'
-    location: 'eastus'
+    location: 'westus3'
     tags: tags
   }
 }
@@ -56,7 +56,7 @@ module DeployOnePlanStandard '../main.bicep' = {
     plan_sku_code: 'S2'
     plan_sku_tier: 'Standard'
     plan_n: 'plan-DeployOnePlanStandard'
-    location: 'centralus'
+    location: 'westus3'
     tags: tags
   }
 }
@@ -68,7 +68,7 @@ module DeployOnePlanBasic '../main.bicep' = {
     plan_sku_code: 'B1'
     plan_sku_tier: 'Basic'
     plan_n: 'plan-DeployOnePlanBasic'
-    location: 'westus'
+    location: 'westus3'
     tags: tags
   }
 }
@@ -80,11 +80,14 @@ module DeployOnePlanFree '../main.bicep' = {
     plan_sku_code: 'F1'
     plan_sku_tier: 'Free'
     plan_n: 'plan-DeployOnePlanFree'
-    location: 'southcentralus'
+    location: 'westus3'
     tags: tags
   }
 }
 
+// ------------------------------------------------------------------------------------------------
+// Linux App Service Plan examples
+// ------------------------------------------------------------------------------------------------
 module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
   name: 'DeployOneLinuxPlanPremiumv2'
   params: {
@@ -93,14 +96,11 @@ module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
     plan_sku_tier: 'PremiumV2'
     plan_n: 'plan-DeployOneLinuxPlanPremiumv2'
     plan_os_kind: 'linux'
-    location: 'eastus'
+    location: 'westus3'
     tags: tags
   }
 }
 
-// ------------------------------------------------------------------------------------------------
-// Linux App Service Plan examples
-// ------------------------------------------------------------------------------------------------
 module DeployOneLinuxPlanStandard '../main.bicep' = {
   name: 'DeployOneLinuxPlanStandard'
   params: {
@@ -109,7 +109,7 @@ module DeployOneLinuxPlanStandard '../main.bicep' = {
     plan_sku_tier: 'Standard'
     plan_n: 'plan-DeployOneLinuxPlanStandard'
     plan_os_kind: 'linux'
-    location: 'centralus'
+    location: 'westus3'
     tags: tags
   }
 }
@@ -118,11 +118,11 @@ module DeployOneLinuxPlanFree '../main.bicep' = {
   name: 'DeployOneLinuxPlanFree'
   params: {
     plan_enable_zone_redundancy: false
-    plan_sku_code: 'F1'
-    plan_sku_tier: 'Free'
+    plan_sku_code: 'B1'
+    plan_sku_tier: 'Basic'
     plan_os_kind: 'linux'
     plan_n: 'plan-DeployOneLinuxPlanFree'
-    location: 'eastus'
+    location: 'westus3'
     tags: tags
   }
 }
