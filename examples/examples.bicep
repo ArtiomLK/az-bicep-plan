@@ -25,29 +25,29 @@ module DefaultPlan '../main.bicep' = {
   }
 }
 
-module DeployOnePlanPremiumv3 '../main.bicep' = {
-  name: 'DeployOnePlanPremiumv3'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'P1V3'
-    plan_sku_tier: 'PremiumV3'
-    plan_n: 'plan-DeployOnePlanPremiumv3'
-    location: 'eastus'
-    tags: tags
-  }
-}
+// module DeployOnePlanPremiumv3 '../main.bicep' = {
+//   name: 'DeployOnePlanPremiumv3'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'P1V3'
+//     plan_sku_tier: 'PremiumV3'
+//     plan_n: 'plan-DeployOnePlanPremiumv3'
+//     location: 'eastus'
+//     tags: tags
+//   }
+// }
 
-module DeployOnePlanPremiumv2HA '../main.bicep' = {
-  name: 'DeployOnePlanPremiumv2HA'
-  params: {
-    plan_enable_zone_redundancy: true
-    plan_sku_code: 'P1V2'
-    plan_sku_tier: 'PremiumV2'
-    plan_n: 'plan-DeployOnePlanPremiumv2HA'
-    location: 'westus3'
-    tags: tags
-  }
-}
+// module DeployOnePlanPremiumv2HA '../main.bicep' = {
+//   name: 'DeployOnePlanPremiumv2HA'
+//   params: {
+//     plan_enable_zone_redundancy: true
+//     plan_sku_code: 'P1V2'
+//     plan_sku_tier: 'PremiumV2'
+//     plan_n: 'plan-DeployOnePlanPremiumv2HA'
+//     location: 'westus3'
+//     tags: tags
+//   }
+// }
 
 module DeployOnePlanStandard '../main.bicep' = {
   name: 'DeployOnePlanStandard'
@@ -85,18 +85,18 @@ module DeployOnePlanFree '../main.bicep' = {
   }
 }
 
-module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
-  name: 'DeployOneLinuxPlanPremiumv2'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'P2V2'
-    plan_sku_tier: 'PremiumV2'
-    plan_n: 'plan-DeployOneLinuxPlanPremiumv2'
-    plan_os_kind: 'linux'
-    location: 'eastus'
-    tags: tags
-  }
-}
+// module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
+//   name: 'DeployOneLinuxPlanPremiumv2'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'P2V2'
+//     plan_sku_tier: 'PremiumV2'
+//     plan_n: 'plan-DeployOneLinuxPlanPremiumv2'
+//     plan_os_kind: 'linux'
+//     location: 'eastus'
+//     tags: tags
+//   }
+// }
 
 // ------------------------------------------------------------------------------------------------
 // Linux App Service Plan examples
