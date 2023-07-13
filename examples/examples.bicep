@@ -49,17 +49,17 @@ module DefaultPlan '../main.bicep' = {
 //   }
 // }
 
-module DeployOnePlanStandard '../main.bicep' = {
-  name: 'DeployOnePlanStandard'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'S2'
-    plan_sku_tier: 'Standard'
-    plan_n: 'plan-DeployOnePlanStandard'
-    location: 'centralus'
-    tags: tags
-  }
-}
+// module DeployOnePlanStandard '../main.bicep' = {
+//   name: 'DeployOnePlanStandard'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'S2'
+//     plan_sku_tier: 'Standard'
+//     plan_n: 'plan-DeployOnePlanStandard'
+//     location: 'centralus'
+//     tags: tags
+//   }
+// }
 
 module DeployOnePlanBasic '../main.bicep' = {
   name: 'DeployOnePlanBasic'
@@ -101,18 +101,18 @@ module DeployOnePlanFree '../main.bicep' = {
 // ------------------------------------------------------------------------------------------------
 // Linux App Service Plan examples
 // ------------------------------------------------------------------------------------------------
-module DeployOneLinuxPlanStandard '../main.bicep' = {
-  name: 'DeployOneLinuxPlanStandard'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'S2'
-    plan_sku_tier: 'Standard'
-    plan_n: 'plan-DeployOneLinuxPlanStandard'
-    plan_os_kind: 'linux'
-    location: 'centralus'
-    tags: tags
-  }
-}
+// module DeployOneLinuxPlanStandard '../main.bicep' = {
+//   name: 'DeployOneLinuxPlanStandard'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'S2'
+//     plan_sku_tier: 'Standard'
+//     plan_n: 'plan-DeployOneLinuxPlanStandard'
+//     plan_os_kind: 'linux'
+//     location: 'centralus'
+//     tags: tags
+//   }
+// }
 
 module DeployOneLinuxPlanFree '../main.bicep' = {
   name: 'DeployOneLinuxPlanFree'
