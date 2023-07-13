@@ -114,15 +114,15 @@ module DeployOneLinuxPlanStandard '../main.bicep' = {
   }
 }
 
-module DeployOneLinuxPlanFree '../main.bicep' = {
-  name: 'DeployOneLinuxPlanFree'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'F1'
-    plan_sku_tier: 'Free'
-    plan_os_kind: 'linux'
-    plan_n: 'plan-DeployOneLinuxPlanFree'
-    location: 'westus3'
-    tags: tags
-  }
-}
+// module DeployOneLinuxPlanFree '../main.bicep' = {
+//   name: 'DeployOneLinuxPlanFree'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'F1'
+//     plan_sku_tier: 'Free'
+//     plan_os_kind: 'linux'
+//     plan_n: 'plan-DeployOneLinuxPlanFree'
+//     location: 'westus3'
+//     tags: tags
+//   }
+// }
