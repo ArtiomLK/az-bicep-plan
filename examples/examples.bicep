@@ -37,29 +37,29 @@ module DeployOnePlanPremiumv3 '../main.bicep' = {
   }
 }
 
-// module DeployOnePlanPremiumv2HA '../main.bicep' = {
-//   name: 'DeployOnePlanPremiumv2HA'
-//   params: {
-//     plan_enable_zone_redundancy: true
-//     plan_sku_code: 'P1V2'
-//     plan_sku_tier: 'PremiumV2'
-//     plan_n: 'plan-DeployOnePlanPremiumv2HA'
-//     location: 'westus3'
-//     tags: tags
-//   }
-// }
+module DeployOnePlanPremiumv2HA '../main.bicep' = {
+  name: 'DeployOnePlanPremiumv2HA'
+  params: {
+    plan_enable_zone_redundancy: true
+    plan_sku_code: 'P1V2'
+    plan_sku_tier: 'PremiumV2'
+    plan_n: 'plan-DeployOnePlanPremiumv2HA'
+    location: 'westus3'
+    tags: tags
+  }
+}
 
-// module DeployOnePlanStandard '../main.bicep' = {
-//   name: 'DeployOnePlanStandard'
-//   params: {
-//     plan_enable_zone_redundancy: false
-//     plan_sku_code: 'S2'
-//     plan_sku_tier: 'Standard'
-//     plan_n: 'plan-DeployOnePlanStandard'
-//     location: 'centralus'
-//     tags: tags
-//   }
-// }
+module DeployOnePlanStandard '../main.bicep' = {
+  name: 'DeployOnePlanStandard'
+  params: {
+    plan_enable_zone_redundancy: false
+    plan_sku_code: 'S2'
+    plan_sku_tier: 'Standard'
+    plan_n: 'plan-DeployOnePlanStandard'
+    location: 'westus3'
+    tags: tags
+  }
+}
 
 // module DeployOnePlanBasic '../main.bicep' = {
 //   name: 'DeployOnePlanBasic'
