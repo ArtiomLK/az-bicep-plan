@@ -61,29 +61,29 @@ module DefaultPlan '../main.bicep' = {
 //   }
 // }
 
-module DeployOnePlanBasic '../main.bicep' = {
-  name: 'DeployOnePlanBasic'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'B1'
-    plan_sku_tier: 'Basic'
-    plan_n: 'plan-DeployOnePlanBasic'
-    location: 'westus3'
-    tags: tags
-  }
-}
+// module DeployOnePlanBasic '../main.bicep' = {
+//   name: 'DeployOnePlanBasic'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'B1'
+//     plan_sku_tier: 'Basic'
+//     plan_n: 'plan-DeployOnePlanBasic'
+//     location: 'westus3'
+//     tags: tags
+//   }
+// }
 
-module DeployOnePlanFree '../main.bicep' = {
-  name: 'DeployOnePlanFree'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'F1'
-    plan_sku_tier: 'Free'
-    plan_n: 'plan-DeployOnePlanFree'
-    location: 'southcentralus'
-    tags: tags
-  }
-}
+// module DeployOnePlanFree '../main.bicep' = {
+//   name: 'DeployOnePlanFree'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'F1'
+//     plan_sku_tier: 'Free'
+//     plan_n: 'plan-DeployOnePlanFree'
+//     location: 'southcentralus'
+//     tags: tags
+//   }
+// }
 
 // module DeployOneLinuxPlanPremiumv2 '../main.bicep' = {
 //   name: 'DeployOneLinuxPlanPremiumv2'
@@ -114,15 +114,15 @@ module DeployOnePlanFree '../main.bicep' = {
 //   }
 // }
 
-module DeployOneLinuxPlanFree '../main.bicep' = {
-  name: 'DeployOneLinuxPlanFree'
-  params: {
-    plan_enable_zone_redundancy: false
-    plan_sku_code: 'F1'
-    plan_sku_tier: 'Free'
-    plan_os_kind: 'linux'
-    plan_n: 'plan-DeployOneLinuxPlanFree'
-    location: 'westus3'
-    tags: tags
-  }
-}
+// module DeployOneLinuxPlanFree '../main.bicep' = {
+//   name: 'DeployOneLinuxPlanFree'
+//   params: {
+//     plan_enable_zone_redundancy: false
+//     plan_sku_code: 'F1'
+//     plan_sku_tier: 'Free'
+//     plan_os_kind: 'linux'
+//     plan_n: 'plan-DeployOneLinuxPlanFree'
+//     location: 'westus3'
+//     tags: tags
+//   }
+// }
