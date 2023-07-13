@@ -21,7 +21,7 @@ module DefaultPlan '../main.bicep' = {
   name: 'DefaultPlan'
   params: {
     plan_n: 'plan-DefaultPlan'
-    location: 'eastus2'
+    location: 'eastus'
   }
 }
 
@@ -32,7 +32,7 @@ module DeployOnePlanPremiumv3 '../main.bicep' = {
     plan_sku_code: 'P1V3'
     plan_sku_tier: 'PremiumV3'
     plan_n: 'plan-DeployOnePlanPremiumv3'
-    location: 'eastus2'
+    location: 'eastus'
     tags: tags
   }
 }
