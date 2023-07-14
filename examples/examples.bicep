@@ -44,7 +44,7 @@ module DeployOnePlanPremiumv2HA '../main.bicep' = {
     plan_sku_code: 'P1V2'
     plan_sku_tier: 'PremiumV2'
     plan_n: 'plan-DeployOnePlanPremiumv2HA'
-    location: 'westus3'
+    location: 'southcentralus'
     tags: tags
   }
 }
